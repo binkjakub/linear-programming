@@ -1,0 +1,9 @@
+option solver cplex;
+reset;
+
+model job_shop.mod
+data job_shop.dat
+
+solve;
+
+display start_time;
