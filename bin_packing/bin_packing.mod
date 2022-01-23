@@ -1,6 +1,6 @@
 param M integer;
 param num_items integer >0;
-param num_bins integer >0;	
+param num_bins integer >0 = num_items;	
 param bin_capacity integer >0;
 
 param item_sizes {1..num_items} >0;

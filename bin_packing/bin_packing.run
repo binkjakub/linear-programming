@@ -4,4 +4,4 @@ model bin_packing.mod;
 data data_bpp.dat;
 solve;
 
-display bin_assignment;
+display {j in 1..num_bins} sum{i in 1..num_items} bin_assignment[i, j];
