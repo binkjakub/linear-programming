@@ -1,0 +1,4 @@
+param M := 100000;
+param num_bins := 50;
+
+read num_items, bin_capacity, {i in 1..num_items} item_sizes[i] <sanity.bpp	
