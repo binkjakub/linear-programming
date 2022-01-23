@@ -1,0 +1,7 @@
+option solver cplex;
+reset;
+model bin_packing.mod;
+data data_bpp.dat;
+solve;
+
+display bin_assignment;
