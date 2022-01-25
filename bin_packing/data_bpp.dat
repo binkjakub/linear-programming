@@ -1,3 +1,3 @@
 param M := 100000;
 
-read num_items, bin_capacity, {i in 1..num_items} item_sizes[i] <insatnce_n_20_c_100.bpp
+read num_items, bin_capacity, {i in 1..num_items} item_sizes[i] <data/N2C3W1_A.BPP

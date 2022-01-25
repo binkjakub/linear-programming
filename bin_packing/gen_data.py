@@ -1,12 +1,15 @@
+import itertools
 import random
 
 
-capacities = [10, 50, 100]
-num_items = 20
+capacities = [10, 100]
+num_items = [20, 50]
 
-for c in capacities:
-    item_sizes = [random.randint(0, c) for _ in range(num_items)]
+for n, c in itertools.product(num_items, capacities):
+    item_sizes = [random.randint(0, c) for _ in range(n)]
 
-    with open(f'./insatnce_n_{num_items}_c_{c}.bpp', 'w') as file:
-        bpp_data = [num_items ,c] + item_sizes
+    rel_path = f'./data/random_gen_insatnce_n_{n}_c_{c}.bpp'
+    with open(rel_path, 'w') as file:
+        bpp_data = [n ,c] + item_sizes
         file.write('\n'.join(str(item) for item in bpp_data))
+        print(rel_path)

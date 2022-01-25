@@ -2,6 +2,16 @@ option solver cplex;
 reset;
 model bin_packing.mod;
 data data_bpp.dat;
+
+show;
+display num_items, bin_capacity, item_sizes;
+display _nvars, _ncons;
+
 solve;
 
 display {j in 1..num_bins} sum{i in 1..num_items} bin_assignment[i, j];
+
+option omit_zero_rows;
+display bin_assignment;
+
+display _total_solve_elapsed_time;
