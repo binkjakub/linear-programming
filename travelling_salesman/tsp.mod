@@ -47,3 +47,5 @@ param:  	cost :=
 	c3 c1	5;
 
 solve;
+display _total_solve_elapsed_time;
+display city_pos;

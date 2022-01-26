@@ -1,0 +1,14 @@
+# param num_cities := 5;
+# param:  	cost := 
+# 	1 2	10 
+# 	1 4	50 
+# 	1 5	70 
+# 	2 3	25 
+# 	2 4	20 
+# 	3 5	3 
+# 	4 3	16 
+# 	5 4	13
+# 	5 1	10
+# 	3 1	5;
+
+read num_cities, {i in 1..num_cities, j in 1..num_cities} cost[i, j] <data/ft70.atsp

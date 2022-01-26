@@ -1,0 +1,13 @@
+option solver cplex;
+reset;
+
+model tsp_adj.mod;
+data tsp_adj.dat;
+
+show;
+display _nvars, _ncons;
+
+solve;
+
+display city_pos;
+display _total_solve_elapsed_time;
